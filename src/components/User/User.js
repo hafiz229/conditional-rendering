@@ -1,4 +1,6 @@
 import React from "react";
+import Player from "../Player/Player";
+import Teacher from "../Teacher/Teacher";
 
 const User = (props) => {
   const { familiar } = props;
@@ -22,10 +24,11 @@ const User = (props) => {
       </div>
       <div>
         <h2>Profession</h2>
+        {familiar ? <Teacher></Teacher> : <Player></Player>}
       </div>
       <div>
         <h2>Connection</h2>
-        {familiar && <div>Please input your phone number</div>}
+        {familiar && <Player></Player>}
       </div>
     </div>
   );
